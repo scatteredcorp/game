@@ -5,7 +5,4 @@ using UnityEngine;
 public class CreateGameState : MonoBehaviour
 {
     public List<string> marbles;
-    
-
-
 }
