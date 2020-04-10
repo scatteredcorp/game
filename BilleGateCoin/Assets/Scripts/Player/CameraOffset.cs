@@ -1,17 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using DPhysics;
+﻿using UnityEngine;
 
 public class CameraOffset : MonoBehaviour
 {
     public Vector3 Offset;
-    private Body marble;
+    public GameObject marble;
     
-    public void Init(Body attachObject) {
-        marble = attachObject;
-    }
-
     public void Update() {
         if(Input.GetMouseButton(1)) {
             Debug.Log("mouse");
