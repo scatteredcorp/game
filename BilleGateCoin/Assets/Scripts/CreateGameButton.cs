@@ -19,4 +19,8 @@ public class CreateGameButton : MonoBehaviour
         gb.transform.parent = content.transform;
         gb.GetComponent<Text>().text = "HELLO0";
     }
+
+    public void YO() {
+        Time.timeScale = 2;
+    }
 }
