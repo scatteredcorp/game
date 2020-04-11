@@ -25,7 +25,6 @@ public class MarbleController : MonoBehaviour {
     public void OnMouseUp() {
         mousePositionTwo = Input.mousePosition;
         Vector3 force = ComputeForce();
-        Debug.Log(force);
         rb.AddForce(force);
     }
 
