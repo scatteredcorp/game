@@ -5,8 +5,117 @@
     <e p="C:\Users\rapha\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_BilleGateCoin.-582022563.00" t="ExcludeRecursive" />
     <e p="C:\Users\rapha\game\BilleGateCoin" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="BOXOPHOBIC" t="Include">
+          <e p="Skybox Cubemap Extended" t="Include">
+            <e p="Core" t="Include">
+              <e p="Shaders" t="Include">
+                <e p="Skybox Cubemap Extended.shader" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Utils" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="BoxophobicUtils" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="GetBoxophobicFolder.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Constants" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="Constants.cs" t="Include" />
+                </e>
+              </e>
+              <e p="SettingsUtils" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="LoadSettingsData.cs" t="Include" />
+                  <e p="SaveSettingsData.cs" t="Include" />
+                </e>
+                <e p="SettingsData.cs" t="Include" />
+              </e>
+              <e p="StyledGUI" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="DrawInspectorBanner.cs" t="Include" />
+                  <e p="DrawInspectorCategory.cs" t="Include" />
+                  <e p="DrawWindowBanner.cs" t="Include" />
+                  <e p="DrawWindowCategory.cs" t="Include" />
+                </e>
+              </e>
+              <e p="StyledInspector" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="StyledBannerDrawer.cs" t="Include" />
+                  <e p="StyledCategoryDrawer.cs" t="Include" />
+                  <e p="StyledInteractiveDrawer.cs" t="Include" />
+                  <e p="StyledMessageDrawer.cs" t="Include" />
+                  <e p="StyledPopupArrayDrawer.cs" t="Include" />
+                  <e p="StyledPopupLayersDrawer.cs" t="Include" />
+                  <e p="StyledRangeOptionsDrawer.cs" t="Include" />
+                  <e p="StyledSpaceDrawer.cs" t="Include" />
+                  <e p="StyledTexturePreviewDrawer.cs" t="Include" />
+                </e>
+                <e p="StyledBanner.cs" t="Include" />
+                <e p="StyledCategory.cs" t="Include" />
+                <e p="StyledInteractive.cs" t="Include" />
+                <e p="StyledMessage.cs" t="Include" />
+                <e p="StyledPopupArray.cs" t="Include" />
+                <e p="StyledPopupLayers.cs" t="Include" />
+                <e p="StyledRangeOptions.cs" t="Include" />
+                <e p="StyledSpace.cs" t="Include" />
+                <e p="StyledTexturePreview.cs" t="Include" />
+              </e>
+              <e p="StyledMaterial" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="StyledBannerDrawer.cs" t="Include" />
+                  <e p="StyledCategoryDrawer.cs" t="Include" />
+                  <e p="StyledDiffusionMaterialDrawer.cs" t="Include" />
+                  <e p="StyledInteractiveDrawer.cs" t="Include" />
+                  <e p="StyledMessageDrawer.cs" t="Include" />
+                  <e p="StyledSpaceDrawer.cs" t="Include" />
+                </e>
+              </e>
+              <e p="StyledMono" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="StyledMonoBehaviourEditor.cs" t="Include" />
+                </e>
+                <e p="StyledMonoBehaviour.cs" t="Include" />
+                <e p="StyledMonoHideScriptField.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="DPhysics" t="Include">
+          <e p="Editor" t="Include">
+            <e p="EditorDCollider.cs" t="Include" />
+          </e>
+          <e p="Examples" t="Include">
+            <e p="Newton's Balls" t="Include">
+              <e p="NewtonsBalls.cs" t="Include" />
+            </e>
+            <e p="Newton's Box" t="Include">
+              <e p="NewtonsBox.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Multiplayer" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="Client.cs" t="Include" />
+              <e p="Command.cs" t="Include" />
+              <e p="CommunicationCodes.cs" t="Include" />
+              <e p="Frame.cs" t="Include" />
+              <e p="Miscellaneous" t="Include">
+                <e p="RTSCamera.cs" t="Include" />
+                <e p="TestCommands.cs" t="Include" />
+              </e>
+              <e p="Plugins" t="Include">
+                <e p="DarkRiftAPI.xml" t="Include" />
+                <e p="DarkRiftReciever.cs" t="Include" />
+                <e p="Readme.txt" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="MarblePreview.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="GitHub" t="Include">
             <e p="Editor" t="Include">
@@ -17,10 +126,29 @@
             </e>
           </e>
         </e>
-        <e p="Scenes" t="Include">
-          <e p="ActualMainMenu" t="Include">
-            <e p="ActualMainMenu.cs" t="Include" />
+        <e p="Scripts" t="Include">
+          <e p="CreateGameButton.cs" t="Include" />
+          <e p="CreateGameState.cs" t="Include" />
+          <e p="game" t="Include">
+            <e p="GameManager.cs" t="Include" />
+            <e p="GameState.cs" t="Include" />
+            <e p="LoadGame.cs" t="Include" />
+            <e p="OpponentController.cs" t="Include" />
           </e>
+          <e p="MarblePreview.cs" t="Include" />
+          <e p="MarblesSelector.cs" t="Include" />
+          <e p="Network" t="Include">
+            <e p="CreateGameManager.cs" t="Include" />
+            <e p="Message.cs" t="Include" />
+            <e p="Network.cs" t="Include" />
+            <e p="Utils.cs" t="Include" />
+          </e>
+          <e p="Player" t="Include">
+            <e p="CameraOffset.cs" t="Include" />
+            <e p="MarbleController.cs" t="Include" />
+            <e p="PlayerController.cs" t="Include" />
+          </e>
+          <e p="SceneLoader.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Examples &amp; Extras" t="Include">
