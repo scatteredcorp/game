@@ -115,7 +115,6 @@
             </e>
           </e>
         </e>
-        <e p="MarblePreview.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="GitHub" t="Include">
             <e p="Editor" t="Include">
@@ -135,7 +134,6 @@
             <e p="LoadGame.cs" t="Include" />
             <e p="OpponentController.cs" t="Include" />
           </e>
-          <e p="MarblePreview.cs" t="Include" />
           <e p="MarblesSelector.cs" t="Include" />
           <e p="Network" t="Include">
             <e p="CreateGameManager.cs" t="Include" />
@@ -144,9 +142,12 @@
             <e p="Utils.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
+            <e p="CameraControl.cs" t="Include" />
+            <e p="CameraGroupControl.cs" t="Include" />
             <e p="CameraOffset.cs" t="Include" />
             <e p="MarbleController.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
+            <e p="SlingControl.cs" t="Include" />
           </e>
           <e p="SceneLoader.cs" t="Include" />
         </e>
