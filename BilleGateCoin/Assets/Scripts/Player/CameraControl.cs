@@ -15,7 +15,7 @@ public class CameraControl : MonoBehaviour
     {
         if (Input.GetMouseButton(1))
         {
-            transform.Rotate(0, Input.GetAxis("Mouse X"), 0);
+            transform.Rotate(0, Input.GetAxis("Mouse X") * 1.5f, 0);
         }
     }
 }

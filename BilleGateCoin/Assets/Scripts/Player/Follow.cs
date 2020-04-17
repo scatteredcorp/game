@@ -1,13 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
-public class CameraGroupControl : MonoBehaviour
+public class Follow : MonoBehaviour
 {
     public GameObject player;
-
-    void LateUpdate()
+    
+    void Update()
     {
         transform.position = player.transform.position;
     }
