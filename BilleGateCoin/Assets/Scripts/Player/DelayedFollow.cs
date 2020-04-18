@@ -15,7 +15,7 @@ public class DelayedFollow : MonoBehaviour
         transform.localPosition = playerPos;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         StartCoroutine(DelayedCamera());
     }

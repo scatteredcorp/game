@@ -6,11 +6,10 @@ using UnityEngine;
 
 public class GroundDrag : MonoBehaviour
 {
-    public float SpeedLimit;
-    private void Update()
+    private void FixedUpdate()
     {
         if (Math.Abs(GetComponent<Rigidbody>().velocity.x) +
-            Math.Abs(GetComponent<Rigidbody>().velocity.z) < SpeedLimit)
+            Math.Abs(GetComponent<Rigidbody>().velocity.z) < 0.1)
         {
             GetComponent<Rigidbody>().velocity = Vector3.zero;
         }

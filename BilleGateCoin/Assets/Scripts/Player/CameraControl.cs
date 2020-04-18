@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 public class CameraControl : MonoBehaviour
 {
     public float Sensivity;
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetMouseButton(1))
         {

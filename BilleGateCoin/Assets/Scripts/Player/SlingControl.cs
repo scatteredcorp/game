@@ -29,7 +29,7 @@ public class SlingControl : MonoBehaviour
         power = 0;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (Input.GetMouseButton(0))
         {
