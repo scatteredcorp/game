@@ -5,17 +5,12 @@ using UnityEngine.UIElements;
 
 public class CameraControl : MonoBehaviour
 {
-    public enum RotationAxis
-    {
-        MouseX = 1,
-        MouseY = 2
-    }
-    
+    public float Sensivity;
     void Update()
     {
         if (Input.GetMouseButton(1))
         {
-            transform.Rotate(0, Input.GetAxis("Mouse X") * 1.5f, 0);
+            transform.Rotate(0, Input.GetAxis("Mouse X") * Sensivity, 0);
         }
     }
 }

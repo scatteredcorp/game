@@ -16,21 +16,23 @@ public class SlingControl : MonoBehaviour
     public GameObject powerPreviewArrow;
     public Camera camera;
     public TextMeshPro powerPreviewNumber;
-    private int wasPressedSince;
+    private bool wasPressed;
     private float power;
+    private bool shootIsRunning;
 
     private void Start()
     {
         powerPreview.SetActive(false);
         powerPreviewArrow.SetActive(false);
+        wasPressed = false;
+        shootIsRunning = false;
         power = 0;
     }
 
-    void Update()
+    private void Update()
     {
         if (Input.GetMouseButton(0))
         {
-            wasPressedSince = 3;
             powerPreview.SetActive(true);
             powerPreviewArrow.SetActive(true);
             powerPreviewNumber.enabled = true;
@@ -80,44 +82,61 @@ public class SlingControl : MonoBehaviour
         }
         else
         {
-            if (wasPressedSince > 0 && Physics.Raycast(transform.position, -Vector3.up, 0.6f))
+            if (Input.GetMouseButtonUp(0) && Physics.Raycast(transform.position, -Vector3.up, 0.6f))
             {
-                Shoot();
+                StartCoroutine(Shoot());
                 StartCoroutine(LaunchEffect());
             }
             else
             {
-                var returnPoint = slingGroup.transform.position;
-                sling.transform.position = returnPoint;
-                notTheSling.transform.position = returnPoint;
-                powerPreview.transform.position = returnPoint;
-                powerPreviewArrow.transform.position = returnPoint;
-                powerPreview.transform.localScale = new Vector3(0.05f, 1f, 0.01f);
-                power = 0;
+                if (!shootIsRunning)
+                {
+                    var returnPoint = slingGroup.transform.position;
+                    sling.transform.position = returnPoint;
+                    notTheSling.transform.position = returnPoint;
+                    powerPreview.transform.position = returnPoint;
+                    powerPreviewArrow.transform.position = returnPoint;
+                    powerPreview.transform.localScale = new Vector3(0.05f, 1f, 0.01f);
+                    power = 0;
+                }
             }
             powerPreview.SetActive(false);
             powerPreviewArrow.SetActive(false);
             powerPreviewNumber.enabled = false;
         }
     }
-
-    void Shoot()
+    
+    IEnumerator Shoot()
     {
-        sling.transform.position = notTheSling.transform.position;
-        wasPressedSince -= 1;
+        shootIsRunning = true;
+        float timer = 0.1f;
+        while (timer > 0)
+        {
+            sling.transform.position = notTheSling.transform.position;
+            timer -= Time.deltaTime;
+            yield return null;
+        }
+        var returnPoint = slingGroup.transform.position;
+        sling.transform.position = returnPoint;
+        notTheSling.transform.position = returnPoint;
+        powerPreview.transform.position = returnPoint;
+        powerPreviewArrow.transform.position = returnPoint;
+        powerPreview.transform.localScale = new Vector3(0.05f, 1f, 0.01f);
+        power = 0;
+        shootIsRunning = false;
     }
 
     IEnumerator LaunchEffect()
     {
         float originalFOV = camera.fieldOfView;
 
-        camera.fieldOfView *= 0.95f;
-        while (camera.fieldOfView < originalFOV)
+        camera.fieldOfView *= 0.9f;
+        while (camera.fieldOfView < originalFOV + 0.01f)
         {
-            camera.fieldOfView *= 1.002f;
+            camera.fieldOfView *= 1.004f;
             yield return null;
         }
 
         camera.fieldOfView = originalFOV;
-    }
+    }    
 }
