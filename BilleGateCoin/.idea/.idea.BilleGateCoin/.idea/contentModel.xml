@@ -205,6 +205,7 @@
               <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
               <e p="TMP_Bitmap-Mobile.shader" t="Include" />
               <e p="TMP_Bitmap.shader" t="Include" />
+              <e p="TMP_SDF Glowing.shader" t="Include" />
               <e p="TMP_SDF Overlay.shader" t="Include" />
               <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
               <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />

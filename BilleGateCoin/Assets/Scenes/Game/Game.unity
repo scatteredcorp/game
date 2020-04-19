@@ -200,7 +200,8 @@ MonoBehaviour:
   powerPreviewArrow: {fileID: 1768729282}
   camera: {fileID: 1412817145}
   powerPreviewNumber: {fileID: 872964680}
-  Power: 10
+  ArrowLength: 1.5
+  Power: 1
 --- !u!1 &468421514 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 9340b8dde8069e94eb7ef948d6cdd510,
