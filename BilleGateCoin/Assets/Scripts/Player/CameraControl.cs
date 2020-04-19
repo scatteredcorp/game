@@ -5,12 +5,12 @@ using UnityEngine.UIElements;
 
 public class CameraControl : MonoBehaviour
 {
-    public float Sensivity;
+    public float CameraSensivity;
     void FixedUpdate()
     {
         if (Input.GetMouseButton(1))
         {
-            transform.Rotate(0, Input.GetAxis("Mouse X") * Sensivity, 0);
+            transform.Rotate(0, Input.GetAxis("Mouse X") * CameraSensivity, 0);
         }
     }
 }

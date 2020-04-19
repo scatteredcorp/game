@@ -149,6 +149,7 @@
             <e p="GroundDrag.cs" t="Include" />
             <e p="MarbleController.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
+            <e p="ShotControl.cs" t="Include" />
             <e p="SlingControl.cs" t="Include" />
           </e>
           <e p="SceneLoader.cs" t="Include" />
