@@ -31,6 +31,11 @@ public class ShotControl : MonoBehaviour
 
     private void FixedUpdate()
     {
+
+        if(player.GetComponent<Rigidbody>().velocity == new Vector3(0, 0, 0)) {
+            shootIsRunning = false;
+        }
+        
         if (Input.GetMouseButton(0))
         {
             wasPressed = true;
@@ -82,8 +87,8 @@ public class ShotControl : MonoBehaviour
             if (wasPressed && Physics.Raycast(transform.position, -Vector3.up, 0.6f))
             {
                 wasPressed = false;
-                StartCoroutine(Shoot());
-                StartCoroutine(LaunchEffect());
+                Shoot();
+                LaunchEffect();
             }
             else
             {
@@ -101,19 +106,25 @@ public class ShotControl : MonoBehaviour
         }
     }
     
-    IEnumerator Shoot()
+    void Shoot()
     {
-        shootIsRunning = true;
-        for (float timer = 0f; timer < 0.1f; timer+=Time.deltaTime)
-        {
-            player.GetComponent<Rigidbody>().AddForce((transform.forward * 4 + transform.up * 2) * pow * Power);
-            player.GetComponent<Rigidbody>().AddTorque(transform.right * pow * Power * 0.8f);
-            yield return null;
-        }
         shootIsRunning = false;
+        Vector3 force = (transform.forward * 4 + transform.up * 2) * pow * Power;
+        if(force.x > 300) force.x = 300;
+        if(force.x < -300) force.x = -300;
+        
+        if(force.y > 150) force.y = 150;
+        if(force.y < -150) force.y = -150;
+
+        if(force.z > 300) force.z = 300;
+        if(force.z < -300) force.z = -300;
+
+        Debug.Log(force);
+        player.GetComponent<Rigidbody>().AddForce(force);
+        player.GetComponent<Rigidbody>().AddTorque(new Vector3(force.z * 0.1f, 0, 0));
     }
 
-    IEnumerator LaunchEffect()
+    void LaunchEffect()
     {
         float originalFOV = camera.fieldOfView;
 
@@ -121,7 +132,7 @@ public class ShotControl : MonoBehaviour
         while (camera.fieldOfView < originalFOV + 0.01f)
         {
             camera.fieldOfView *= 1.004f;
-            yield return null;
+            return;
         }
 
         camera.fieldOfView = originalFOV;
