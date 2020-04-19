@@ -614,7 +614,7 @@ PrefabInstance:
     - target: {fileID: 673233551490927778, guid: 94f6e912620c16f608581dfce4128239,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -59.29995
+      value: -61
       objectReference: {fileID: 0}
     - target: {fileID: 673233551490927778, guid: 94f6e912620c16f608581dfce4128239,
         type: 3}
@@ -624,32 +624,32 @@ PrefabInstance:
     - target: {fileID: 673233551490927778, guid: 94f6e912620c16f608581dfce4128239,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: -281.4001
+      value: 644
       objectReference: {fileID: 0}
     - target: {fileID: 673233551490927778, guid: 94f6e912620c16f608581dfce4128239,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: -200
+      value: 240
       objectReference: {fileID: 0}
     - target: {fileID: 673233551490927778, guid: 94f6e912620c16f608581dfce4128239,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 673233551490927778, guid: 94f6e912620c16f608581dfce4128239,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 673233551490927778, guid: 94f6e912620c16f608581dfce4128239,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 673233551490927778, guid: 94f6e912620c16f608581dfce4128239,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 673233551490927778, guid: 94f6e912620c16f608581dfce4128239,
         type: 3}
@@ -690,6 +690,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 673233553070306812, guid: 94f6e912620c16f608581dfce4128239,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000017166138
       objectReference: {fileID: 0}
     - target: {fileID: 673233551572672131, guid: 94f6e912620c16f608581dfce4128239,
         type: 3}

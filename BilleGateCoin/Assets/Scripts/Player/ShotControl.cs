@@ -10,7 +10,6 @@ using UnityEngine.UI;
 public class ShotControl : MonoBehaviour
 {
     public GameObject player;
-    public GameObject imaginaryTarget;
     public GameObject powerPreview;
     public GameObject powerPreviewArrow;
     public Camera camera;
@@ -88,7 +87,7 @@ public class ShotControl : MonoBehaviour
             {
                 wasPressed = false;
                 Shoot();
-                LaunchEffect();
+                StartCoroutine(LaunchEffect());
             }
             else
             {
@@ -108,7 +107,7 @@ public class ShotControl : MonoBehaviour
     
     void Shoot()
     {
-        shootIsRunning = false;
+        shootIsRunning = true;
         Vector3 force = (transform.forward * 4 + transform.up * 2) * pow * Power;
         if(force.x > 300) force.x = 300;
         if(force.x < -300) force.x = -300;
@@ -122,19 +121,19 @@ public class ShotControl : MonoBehaviour
         Debug.Log(force);
         player.GetComponent<Rigidbody>().AddForce(force);
         player.GetComponent<Rigidbody>().AddTorque(new Vector3(force.z * 0.1f, 0, 0));
+        shootIsRunning = false;
     }
 
-    void LaunchEffect()
+    IEnumerator LaunchEffect()
     {
         float originalFOV = camera.fieldOfView;
 
         camera.fieldOfView *= 0.9f;
-        while (camera.fieldOfView < originalFOV + 0.01f)
+        while (camera.fieldOfView < originalFOV - 0.01f)
         {
             camera.fieldOfView *= 1.004f;
-            return;
+            yield return null;
         }
-
         camera.fieldOfView = originalFOV;
     }    
 }

@@ -180,7 +180,6 @@ Transform:
   - {fileID: 1768729283}
   - {fileID: 872964679}
   - {fileID: 1412817143}
-  - {fileID: 795333739}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -197,7 +196,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1074951258}
-  imaginaryTarget: {fileID: 795333738}
   powerPreview: {fileID: 893596336}
   powerPreviewArrow: {fileID: 1768729282}
   camera: {fileID: 1412817145}
@@ -479,36 +477,6 @@ Transform:
   m_Father: {fileID: 1172830648}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 40.703003, y: 140.09401, z: 142.21301}
---- !u!1 &795333738
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 795333739}
-  m_Layer: 0
-  m_Name: imaginaryTarget
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &795333739
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 795333738}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 30, z: 60}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 267265963}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &854353057
 GameObject:
   m_ObjectHideFlags: 0

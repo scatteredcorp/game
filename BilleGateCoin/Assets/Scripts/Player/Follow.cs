@@ -6,7 +6,7 @@ public class Follow : MonoBehaviour
 {
     public GameObject player;
     
-    void FixedUpdate()
+    void Update()
     {
         transform.position = player.transform.position;
     }

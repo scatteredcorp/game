@@ -144,13 +144,11 @@
           <e p="Player" t="Include">
             <e p="CameraControl.cs" t="Include" />
             <e p="CameraOffset.cs" t="Include" />
-            <e p="DelayedFollow.cs" t="Include" />
             <e p="Follow.cs" t="Include" />
             <e p="GroundDrag.cs" t="Include" />
             <e p="MarbleController.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
             <e p="ShotControl.cs" t="Include" />
-            <e p="SlingControl.cs" t="Include" />
           </e>
           <e p="SceneLoader.cs" t="Include" />
         </e>
