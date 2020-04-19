@@ -120,7 +120,7 @@ public class ShotControl : MonoBehaviour
 
         Debug.Log(force);
         player.GetComponent<Rigidbody>().AddForce(force);
-        player.GetComponent<Rigidbody>().AddTorque(new Vector3(force.z * 0.1f, 0, 0));
+        player.GetComponent<Rigidbody>().AddTorque(force.z * 0.2f, 0, -force.x * 0.2f);
         shootIsRunning = false;
     }
 
