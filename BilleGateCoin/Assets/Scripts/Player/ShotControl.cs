@@ -83,10 +83,10 @@ public class ShotControl : MonoBehaviour
     {
         shootIsRunning = true;
         Vector3 force = (transform.forward * 4 + transform.up * 2) * pow * Power;
+        Vector3 torque = new Vector3(force.z, 0, -force.x) * 0.02f;
 
-        Debug.Log(force);
         player.GetComponent<Rigidbody>().AddForce(force);
-        player.GetComponent<Rigidbody>().AddTorque(transform.right * 10);
+        player.GetComponent<Rigidbody>().AddTorque(torque);
         shootIsRunning = false;
     }
 
