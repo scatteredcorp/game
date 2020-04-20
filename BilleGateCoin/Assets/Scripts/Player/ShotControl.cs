@@ -27,10 +27,18 @@ public class ShotControl : MonoBehaviour
         wasPressed = false;
         shootIsRunning = false;
         pow = 0;
+        Time.timeScale = 15;
+        
+
     }
 
+    private int i = 0;
     private void FixedUpdate()
     {
+        if(player.GetComponent<Rigidbody>().velocity == new Vector3(0, 0, 0) && i < 10) {
+            Shoot(new Vector3(-354.5f, 200f, -185.3f));
+            i++;
+        }
         if (Input.GetMouseButton(0))
         {
             wasPressed = true;
@@ -60,7 +68,8 @@ public class ShotControl : MonoBehaviour
                 wasPressed = false;
                 if (Physics.Raycast(transform.position, -Vector3.up, 0.6f))
                 {
-                    Shoot();
+                    Vector3 force = (transform.forward * 4 + transform.up * 2) * pow * Power;
+                    Shoot(force);
                     StartCoroutine(LaunchEffect());
                 }
             }
@@ -79,12 +88,11 @@ public class ShotControl : MonoBehaviour
         powerPreviewNumber.text = Convert.ToString(Convert.ToInt32(pow)) + "%";
     }
 
-    void Shoot()
+    void Shoot(Vector3 force)
     {
         shootIsRunning = true;
-        Vector3 force = (transform.forward * 4 + transform.up * 2) * pow * Power;
         Vector3 torque = new Vector3(force.z, 0, -force.x) * 0.02f;
-
+        Debug.Log(force);
         player.GetComponent<Rigidbody>().AddForce(force);
         player.GetComponent<Rigidbody>().AddTorque(torque);
         shootIsRunning = false;

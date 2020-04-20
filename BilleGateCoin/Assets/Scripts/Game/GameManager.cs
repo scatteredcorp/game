@@ -5,7 +5,7 @@ public class GameManager : MonoBehaviour {
 
     public uint ObstaclesNumber;
     public List<GameObject> Obstacles;
-    private string hash = "8cf28eb9ac221d8cd15298b9ae63eca910b536a5234c133c7e364b29a4e39d21";
+    private string hash = "1cf28eb9ac221d8cd15298b9ae63eca910b536a5234c133c7e364b29a4e39d21";
 
     private GameObject ObstaclesContainer;
     public void Start() {
