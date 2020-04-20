@@ -1248,9 +1248,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9109dff377f2a6f879f28d04d13b56d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Obstacles: 20
-  Obstacle: {fileID: 7368007713391766246, guid: 15c14fa064421f0d39e78475be4a0bab,
-    type: 3}
+  ObstaclesNumber: 100
+  Obstacles:
+  - {fileID: 8314559394625099230, guid: 39fd092631d67750d999df4ee469ffb7, type: 3}
+  - {fileID: 4821939967134582067, guid: 732bb1a5d044f44e1a3dbb837793f882, type: 3}
 --- !u!64 &1561461989
 MeshCollider:
   m_ObjectHideFlags: 0
