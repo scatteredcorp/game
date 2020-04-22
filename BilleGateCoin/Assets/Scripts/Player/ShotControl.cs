@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using Boo.Lang;
 using TMPro;
 using TMPro.Examples;
 using UnityEngine;
@@ -27,18 +26,17 @@ public class ShotControl : MonoBehaviour
         wasPressed = false;
         shootIsRunning = false;
         pow = 0;
-        Time.timeScale = 15;
-        
-
+        Time.timeScale = 1;
+    
     }
 
     private int i = 0;
     private void FixedUpdate()
     {
-        if(player.GetComponent<Rigidbody>().velocity == new Vector3(0, 0, 0) && i < 10) {
-            Shoot(new Vector3(-354.5f, 200f, -185.3f));
-            i++;
-        }
+        // if(player.GetComponent<Rigidbody>().velocity == new Vector3(0, 0, 0) && i < 5) {
+        //     Shoot(new Vector3(-354.5f, 200f, -185.3f));
+        //     i++;
+        // }
         if (Input.GetMouseButton(0))
         {
             wasPressed = true;

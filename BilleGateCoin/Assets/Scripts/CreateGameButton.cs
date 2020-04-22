@@ -21,6 +21,6 @@ public class CreateGameButton : MonoBehaviour
     }
 
     public void YO() {
-        Time.timeScale = 2;
+        // Time.timeScale = 2;
     }
 }
