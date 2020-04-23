@@ -17,7 +17,8 @@ namespace Network
         public enum MAGIC : byte
         {
             MainNetwork = 1,
-            TestNetwork = 2
+            TestNetwork = 2,
+            LocalNetwork = 3
         }
 
         // Message Part 2: COMMAND
@@ -49,7 +50,10 @@ namespace Network
             GetPublicKey,
             SendPublicKey,
             
-            RegisterNode
+            RegisterNode,
+
+            UnityGetInventory,
+            UnitySendInventory
         }
     }
 }
