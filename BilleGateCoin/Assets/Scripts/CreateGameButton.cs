@@ -27,7 +27,7 @@ public class CreateGameButton : MonoBehaviour
 
         addMarbleReturnCode = Network.Network.ReturnCode.Pending;
 
-        byte[] msg = Utils.CreateMessage(Message.COMMAND.GetInventory, Base58Encode.Decode("xg3S73psPZRsMFycvrKCTiNRv4Mi8XKdps"), Message.MAGIC.LocalNetwork);
+        byte[] msg = Utils.CreateMessage(Message.COMMAND.UnityGetInventory, Base58Encode.Decode("xg3S73psPZRsMFycvrKCTiNRv4Mi8XKdps"), Message.MAGIC.LocalNetwork);
 
         Network.Network.SendData(new IPEndPoint(IPAddress.Parse("127.0.0.1"), 27497), msg, ref addMarbleReturnCode);
         waitingForAnswer = true;

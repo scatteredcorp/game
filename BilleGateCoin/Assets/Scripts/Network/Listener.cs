@@ -86,7 +86,6 @@ namespace Network
                     while (keepListening && !tcpServer.Pending())
                     {
                         Thread.Sleep(updateInterval);
-                        Debug.Log("Waiting for client...");
                     }
 
                     if (!keepListening)
