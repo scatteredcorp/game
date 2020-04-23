@@ -1,12 +1,37 @@
-using System;
+﻿using System;
+using System.Collections.Generic;
 using System.Text;
 using System.Security.Cryptography;
-using System.Net;
 
 namespace Network
 {
     class Utils
     {
+
+        public static byte[] CreateMessage(Message.COMMAND command, byte[] payload, Message.MAGIC network = Message.MAGIC.TestNetwork) {
+            byte[] r = new byte[Message.MessageStructureSize + payload.Length];
+
+            r[0] = (byte) network;
+            r[1] = (byte) command;
+
+            WriteUInt(r, 2, (uint) payload.Length);
+
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] hash = sha256.ComputeHash(payload);
+                for (int i = 0; i < 4; i++)
+                {
+                    r[i + 6] = hash[i];
+                }
+            }
+
+            for (int i = 0; i < payload.Length; i++) {
+                r[i + 10] = payload[i];
+            }
+
+            return r;
+        }
+
         public static byte[] CreateTextMessage(string text, Message.MAGIC targetNetwork = Message.MAGIC.TestNetwork)
         {
             byte[] txt_bytes = Encoding.Unicode.GetBytes(text);
@@ -41,14 +66,5 @@ namespace Network
             for (int i = 0; i < n.Length; i++)
                 target[startIndex + i] = n[i];
         }
-
-        public static void SendData(byte[] data, int port, string _ip) {
-			
-			IPAddress localAddress = IPAddress.Parse(_ip);
-			IPEndPoint ip = new IPEndPoint(localAddress, port);
-            
-			Network.ReturnCode code = Network.ReturnCode.Pending;
-			Network.SendData(ip, data, ref code);
-		}
     }
 }

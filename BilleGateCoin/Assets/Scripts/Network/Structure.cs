@@ -1,4 +1,6 @@
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace Network
 {
@@ -37,7 +39,17 @@ namespace Network
 
             GetContracts = 9,
 
-            TextMessage = 10
+            TextMessage = 10,
+
+            SendContract,
+
+            GetInventory,
+            SendInventory,
+
+            GetPublicKey,
+            SendPublicKey,
+            
+            RegisterNode
         }
     }
 }
