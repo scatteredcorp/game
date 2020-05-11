@@ -27,7 +27,12 @@ public class CreateGameButton : MonoBehaviour
 
         addMarbleReturnCode = Network.Network.ReturnCode.Pending;
 
-        byte[] msg = Utils.CreateMessage(Message.COMMAND.UnityGetInventory, Base58Encode.Decode("xg3S73psPZRsMFycvrKCTiNRv4Mi8XKdps"), Message.MAGIC.LocalNetwork);
+        byte[] addr = Base58Encode.Decode("xshhxPSH42N4d9VZ4VNaxgPGVWKws24taq");
+        for(int i = 0; i < addr.Length; i++) {
+            Debug.Log(addr[i]);
+        }
+
+        byte[] msg = Utils.CreateMessage(Message.COMMAND.UnityGetInventory, addr, Message.MAGIC.LocalNetwork);
 
         Network.Network.SendData(new IPEndPoint(IPAddress.Parse("127.0.0.1"), 27497), msg, ref addMarbleReturnCode);
         waitingForAnswer = true;
@@ -41,6 +46,8 @@ public class CreateGameButton : MonoBehaviour
 
     private void Update()
     {
+        if(GlobalController.Listener == null) return;
+
         if (waitingForAnswer && GlobalController.Listener.IncomingQueue.Count > 0)
         {
             NetworkMessage networkMessage = GlobalController.Listener.IncomingQueue.Dequeue();
@@ -52,7 +59,10 @@ public class CreateGameButton : MonoBehaviour
             else
             {
                 waitingForAnswer = false;
-                // Nuf.ParseInventory(networkMessage.Payload);
+                uint dummy = 0;
+                Contracts.Placement inventory = Contracts.ContractHelper.DeserializePlacement(networkMessage.Payload, ref dummy);
+                inventory.PrettyPrint();
+                Debug.Log(inventory.Marbles[0].Type.ToString());
                 Debug.Log("Received inventory response.");
             }
         }
