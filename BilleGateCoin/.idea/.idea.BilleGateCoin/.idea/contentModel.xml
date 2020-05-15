@@ -126,6 +126,15 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Base58" t="Include">
+            <e p="Base58.cs" t="Include" />
+            <e p="Helper.cs" t="Include" />
+          </e>
+          <e p="Contracts" t="Include">
+            <e p="Contract.cs" t="Include" />
+            <e p="Marble.cs" t="Include" />
+            <e p="MarblePlacement.cs" t="Include" />
+          </e>
           <e p="CreateGameButton.cs" t="Include" />
           <e p="CreateGameState.cs" t="Include" />
           <e p="game" t="Include">
@@ -134,11 +143,14 @@
             <e p="LoadGame.cs" t="Include" />
             <e p="OpponentController.cs" t="Include" />
           </e>
+          <e p="GlobalController.cs" t="Include" />
+          <e p="MarblePreviews.cs" t="Include" />
           <e p="MarblesSelector.cs" t="Include" />
           <e p="Network" t="Include">
-            <e p="CreateGameManager.cs" t="Include" />
-            <e p="Message.cs" t="Include" />
+            <e p="Listener.cs" t="Include" />
             <e p="Network.cs" t="Include" />
+            <e p="NetworkMessage.cs" t="Include" />
+            <e p="Structure.cs" t="Include" />
             <e p="Utils.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
