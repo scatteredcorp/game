@@ -24,9 +24,7 @@ public class CreateGameButton : MonoBehaviour
     public Sprite SoccerBall;
     public Sprite Stripes;
     public Sprite Whirlwind;    
-
-    public GameObject marbleText;
-    public GameObject content;
+    
     private Network.Network.ReturnCode addMarbleReturnCode;
     bool waitingForAnswer = false;
     public void AddMarble() {

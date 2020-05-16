@@ -144,6 +144,8 @@
             <e p="OpponentController.cs" t="Include" />
           </e>
           <e p="GlobalController.cs" t="Include" />
+          <e p="Illustrator.cs" t="Include" />
+          <e p="InventoryManager.cs" t="Include" />
           <e p="MarblePreviews.cs" t="Include" />
           <e p="MarblesSelector.cs" t="Include" />
           <e p="Network" t="Include">
