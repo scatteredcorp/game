@@ -53,7 +53,12 @@ namespace Network
             RegisterNode,
 
             UnityGetInventory,
-            UnitySendInventory
+            UnitySendInventory,
+            UnityGetWallet,
+            UnitySendWallet,
+            UnityGetOwnInventory,
+            UnitySendOwnInventory,
+
         }
     }
 }
