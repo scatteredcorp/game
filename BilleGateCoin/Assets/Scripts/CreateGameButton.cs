@@ -16,6 +16,7 @@ public class CreateGameButton : MonoBehaviour
     public GameObject title;
     public GameObject variants;
     public GameObject lastcolor;
+    public GameObject input;
     public Sprite Earth;
     public Sprite Elastic;
     public Sprite Error;
@@ -28,20 +29,32 @@ public class CreateGameButton : MonoBehaviour
     private Network.Network.ReturnCode addMarbleReturnCode;
     bool waitingForAnswer = false;
     
-    public void AddMarble() {
-        addMarbleReturnCode = Network.Network.ReturnCode.Pending;
-
-        byte[] addr = Base58Encode.Decode("xezJFKnCWDM7NY4XAt8NtsUYYMeki4DpWU");
-        for(int i = 0; i < addr.Length; i++) {
-            Debug.Log(addr[i]);
+    public void AddMarble()
+    {
+        var _input = input.GetComponent<Text>().text;
+        if (_input != "")
+        {
+            addMarbleReturnCode = Network.Network.ReturnCode.Pending;
+            
+            byte[] addr = Base58Encode.Decode(_input);
+            for(int i = 0; i < addr.Length; i++) {
+                Debug.Log(addr[i]);
+            }
+            
+            byte[] msg = Utils.CreateMessage(Message.COMMAND.UnityGetInventory, addr, Message.MAGIC.LocalNetwork);
+            
+            Network.Network.SendData(new IPEndPoint(IPAddress.Parse("127.0.0.1"), 27497), msg, ref addMarbleReturnCode);
+            waitingForAnswer = true;
+            
+            Debug.Log("Requested inventory from core...");
         }
-
-        byte[] msg = Utils.CreateMessage(Message.COMMAND.UnityGetInventory, addr, Message.MAGIC.LocalNetwork);
-
-        Network.Network.SendData(new IPEndPoint(IPAddress.Parse("127.0.0.1"), 27497), msg, ref addMarbleReturnCode);
-        waitingForAnswer = true;
-
-        Debug.Log("Requested inventory from core...");
+        else
+        {
+            for (int i = display.transform.childCount; i > 0; i--)
+            {
+                Destroy(display.transform.GetChild(i-1).gameObject);
+            }
+        }
     }
 
     public void YO() {
