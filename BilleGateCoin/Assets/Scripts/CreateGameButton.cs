@@ -27,8 +27,8 @@ public class CreateGameButton : MonoBehaviour
     
     private Network.Network.ReturnCode addMarbleReturnCode;
     bool waitingForAnswer = false;
+    
     public void AddMarble() {
-
         addMarbleReturnCode = Network.Network.ReturnCode.Pending;
 
         byte[] addr = Base58Encode.Decode("xezJFKnCWDM7NY4XAt8NtsUYYMeki4DpWU");
