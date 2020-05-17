@@ -14,7 +14,7 @@ public class GlobalController : MonoBehaviour
     void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
-
+        if(Listener != null) return;
         Listener = new Listener(27496, 2);
         Listener.StartListening();
     }
