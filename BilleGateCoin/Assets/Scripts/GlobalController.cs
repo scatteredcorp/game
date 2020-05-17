@@ -19,7 +19,7 @@ public class GlobalController : MonoBehaviour
         Listener.StartListening();
     }
 
-    private void OnDestroy()
+    private void OnApplicationQuit()
     {
         listener.StopListening();
     }
