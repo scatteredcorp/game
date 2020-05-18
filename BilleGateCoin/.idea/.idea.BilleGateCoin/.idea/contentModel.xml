@@ -130,6 +130,7 @@
             <e p="Base58.cs" t="Include" />
             <e p="Helper.cs" t="Include" />
           </e>
+          <e p="ChooseMarble.cs" t="Include" />
           <e p="Contracts" t="Include">
             <e p="Contract.cs" t="Include" />
             <e p="Marble.cs" t="Include" />
@@ -146,6 +147,7 @@
           <e p="GlobalController.cs" t="Include" />
           <e p="Illustrator.cs" t="Include" />
           <e p="InventoryManager.cs" t="Include" />
+          <e p="MarbleChoosingManager.cs" t="Include" />
           <e p="MarblePreviews.cs" t="Include" />
           <e p="MarblesSelector.cs" t="Include" />
           <e p="Network" t="Include">

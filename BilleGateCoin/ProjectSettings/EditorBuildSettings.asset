@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu/CurrentGames.unity
     guid: 75c4036a708f248418d170caff864ace
+  - enabled: 1
+    path: Assets/Scenes/Menu/ChooseMarbles.unity
+    guid: ebbeb4067dbaebc40814755078cd8c46
   m_configObjects: {}
