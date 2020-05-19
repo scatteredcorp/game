@@ -1712,7 +1712,7 @@ MonoBehaviour:
   type: {fileID: 671383812}
   color: {fileID: 368400751}
   marblepreview: {fileID: 482630292}
-  amount: {fileID: 18566740}
+  amount: {fileID: 76973305}
   marblepreviewslot: {fileID: 174836541}
   marblepreviewslottext: {fileID: 1331448644}
 --- !u!1 &886255927
