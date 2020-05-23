@@ -10,7 +10,15 @@ public class GlobalController : MonoBehaviour
 
     internal static Listener Listener { get => listener; set => listener = value; }
 
-    // Start is called before the first frame update
+    public Texture2D cursorTexture;
+    public CursorMode cursorMode = CursorMode.Auto;
+    public Vector2 hotSpot = Vector2.zero;
+
+    void Start()
+    {
+        Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
+    }
+
     void Awake()
     {
         DontDestroyOnLoad(this.gameObject);

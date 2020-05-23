@@ -166,6 +166,7 @@
             <e p="PlayerController.cs" t="Include" />
             <e p="ShotControl.cs" t="Include" />
           </e>
+          <e p="quit.cs" t="Include" />
           <e p="SceneLoader.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
